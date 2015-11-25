@@ -11,7 +11,6 @@
     'App.DNDSortDirectiveModule',
     'App.itemsService',
     'App.sortedTable',
-    'App.treePieChart',
-    'App.countryInput'
+    'App.treePieChart'
   ]);
 })();

@@ -20,9 +20,5 @@ angular.module('App.Views').config(function($stateProvider, $urlRouterProvider, 
     url: "/treePieChart",
     templateUrl: "app/components/treePieChart/treePieChartView.html",
     controller: "treePieChartController"
-  }).state('countrySelection', {
-    url: "/countrySelection",
-    templateUrl: "app/components/countrySelection/countrySelectionView.html",
-    controller: "countrySelectionController"
   });
 });
