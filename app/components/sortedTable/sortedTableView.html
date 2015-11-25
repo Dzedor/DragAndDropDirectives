@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h1 class="text-center">Table Sorter</h1>
+            <br /> <br />
+            <h2 class="text-center">Dessert List</h2>
+            <table class="table table-hover" drag-and-drop-sort="items">
+                <thead>
+                    <tr>
+                        <th class="text-center">Dessert ID</th>
+                        <th class="text-center">Dessert name</th>
+                        <th class="text-center">Remove/Edit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in items" drag-and-drop-sort-item="item">
+                        <td class="text-center">{{item.id}}</td>
+                        <td class="text-center">{{item.name}}</td>
+                        <td class="text-center">
+                            <button class="btn btn-danger btn-sm glyphicon glyphicon-remove" ng-click="removeItem(item)"></button>
+                            <button ng-disabled="inAdd" class="btn btn-primary btn-sm glyphicon glyphicon-edit" ng-click="editItem(item)"></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button ng-hide="inEdit || inAdd" ng-click="addItem()" class="btn btn-default">Add item</button>
+            <form ng-show="inEdit || inAdd" class="form-inline center-block">
+                <div class="form-group">
+                    <label>{{ inEdit ? 'Edit item: ' : 'Add item: ' }}</label>
+                    <input focus-on-show type="text" class="form-control" ng-model="itemInEdit.name">
+                </div>
+                <button ng-click="submitItemEdit()" class="btn btn-success">Submit</button>
+                <button ng-click="cancelItemEdit()" class="btn btn-danger">Cancel</button>
+            </form>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>

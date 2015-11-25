@@ -1,0 +1,19 @@
+.table>tbody>tr.insertionPointer {
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+}
+
+.table>tbody>tr.dragged>td,
+.table>tbody>tr.dragged>th {
+    opacity: 0.3;
+}
+
+.table>tbody>tr.selected>td,
+.table>tbody>tr.selected>th {
+    background-color: #d9edf7
+}
+
+.table-hover>tbody>tr.selected:hover>td,
+.table-hover>tbody>tr.selected:hover>th {
+    background-color: #c4e3f3
+}

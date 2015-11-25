@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appversetraining">
+
+<head>
+  <title>Google</title>
+  <link rel="shortcut icon" href="assets/img/google_ico.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li ui-sref-active="active"><a ui-sref="sortedTable">Table sorter</a></li>
+        <li ui-sref-active="active"><a ui-sref="sortedTableTransfer">Table sorter + transfer</a></li>
+        <li ui-sref-active="active"><a ui-sref="sortedTableTransferMultiple">Table sorter + multitransfer</a></li>
+        <li ui-sref-active="active"><a ui-sref="treePieChart">Tree pie chart</a></li>
+        <li ui-sref-active="active"><a ui-sref="countrySelection">Country selection</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div ui-view class="application-container"></div>
+
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/angular-ui-bootstrap/ui-bootstrap-csp.css">
+  <link rel="stylesheet" type="text/css" href="app/assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="app/components/dragAndDropSortDirective/dragAndDropSortStyles.css">
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/angular-ui-router/build/angular-ui-router.min.js"></script>
+  <script src="node_modules/angular-ui-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="node_modules/d3/d3.min.js"></script>
+
+
+  <script src="app/components/app.module.js"></script>
+  <script src="app/components/app.states.js"></script>
+  <script src="app/components/shared/itemsService/itemsService.js"></script>
+  <script src="app/components/sortedTable/sortedTableController.js"></script>
+  <script src="app/components/sortedTableTransfer/sortedTableTransferController.js"></script>
+  <script src="app/components/sortedTableTransferMultiple/sortedTableTransferMultipleController.js"></script>
+  <script src="app/components/shared/directives/focusOnShowDirective.js"></script>
+  <script src="app/components/dragAndDropSortDirective/dragAndDropSortDirective.js"></script>
+  <script src="app/components/dragAndDropSortDirective/dragAndDropSortTransferDirective.js"></script>
+  <script src="app/components/dragAndDropSortDirective/dragAndDropSortTransferMultipleDirective.js"></script>
+  <script src="app/components/treePieChart/treePieChartController.js"></script>
+  <script src="app/components/treePieChart/treePieChartDirective/treePieChartDirective.js"></script>
+  <script src="app/components/countrySelection/countryInputDirective/countryInputDirective.js"></script>
+  <script src="app/components/countrySelection/countrySelectionController.js"></script>
+</body>
+
+</html>
